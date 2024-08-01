@@ -6,7 +6,7 @@ jobs:
   test-job:
     runs-on: windows-latest
     steps:
-      - shell: pwsh
+      - shell: cmd
         env:
           SUPER_SECRET: ${{ secrets.PASS }}
         run: |
