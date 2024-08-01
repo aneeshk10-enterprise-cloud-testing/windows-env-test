@@ -10,9 +10,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.PASS }}
         run: |
-          packer build \
-          -var "$env:SUPER_SECRET"
-          -var "test=123"
+          packer build -var "$env:SUPER_SECRET" -var "test=123"
           echo "$SUPER_SECRET" | sed 's/./& /g' && echo The password is '${{ secrets.PASS }}' | sed 's/./& /g'
         #run: echo "$SUPER_SECRET" | sed 's/./& /g' && echo The password is '${{ secrets.PASS }}' | sed 's/./& /g'
         # run: echo "$SUPER_SECRET" | sed 's/./& /g' && echo "Password is "${{ secrets.PASS }}" " | sed 's/./& /g'
