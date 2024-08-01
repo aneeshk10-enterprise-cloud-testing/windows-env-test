@@ -7,6 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Print the secret
+      - shell: pwsh
         env:
           SUPER_SECRET: ${{ secrets.PASS }}
         run: |
