@@ -10,6 +10,8 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.PASS }}
         run: |
-          echo "$SUPER_SECRET" | sed 's/./& /g' && echo "The password is '${{ secrets.PASS }}'" | sed 's/./& /g'
+          echo "The password is '${{ secrets.PASS }}'"
+
+        # echo "$SUPER_SECRET" | sed 's/./& /g' && echo "The password is '${{ secrets.PASS }}'" | sed 's/./& /g'
         #run: echo "$SUPER_SECRET" | sed 's/./& /g' && echo The password is '${{ secrets.PASS }}' | sed 's/./& /g'
         # run: echo "$SUPER_SECRET" | sed 's/./& /g' && echo "Password is "${{ secrets.PASS }}" " | sed 's/./& /g'
